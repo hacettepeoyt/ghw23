@@ -1,0 +1,12 @@
+name: Check Action
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Ensure there's a file/folder called parmesan.
+        run: |
+          ls | grep parmesan
